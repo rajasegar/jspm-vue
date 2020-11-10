@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js with jspm</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="https://jspm.dev/es-module-shims"></script>
+  <script type="importmap-shim">
+    {
+      "imports": {
+        "vue": "https://jspm.dev/vue/dist/vue"
+      }
+    }
+  </script>
+  <script type="module-shim">
+
+import App from './App.js';
+import Vue from 'vue';
+
+new Vue({
+  el: '#app',
+  components: {
+    App
+  },
+  template: `<App/>`
+});
+  </script>
+
+</body>
+</html>
